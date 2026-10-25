@@ -3,70 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vaishnavi Bhongale | Computer Engineer Portfolio</title>
+    <title>Vaishnavi Bhongale | Computer Engineer & Data Analyst Portfolio</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; color: #333; }
-        header { background-color: #1a252f; color: white; padding: 50px 20px; text-align: center; }
-        h1 { margin: 0; font-size: 2.5em; }
-        .subtitle { font-size: 1.2em; color: #bdc3c7; margin-top: 10px; }
-        .container { max-width: 800px; margin: 30px auto; padding: 25px; background: white; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-radius: 8px; }
-        h2 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; margin-top: 0; }
-        .skills-list { display: flex; flex-wrap: wrap; gap: 10px; list-style: none; padding: 0; }
-        .skills-list li { background: #3498db; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9em; font-weight: bold; }
-        .project-card { border-left: 4px solid #2ecc71; padding-left: 15px; margin-bottom: 20px; }
-        .project-title { font-weight: bold; font-size: 1.2em; color: #2c3e50; }
-        .contact-links a { display: inline-block; margin-right: 20px; color: #3498db; text-decoration: none; font-weight: bold; }
-        .contact-links a:hover { text-decoration: underline; }
-        .footer { text-align: center; padding: 20px; color: #7f8c8d; font-size: 0.9em; background: #eef2f5; margin-top: 40px; }
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --success: #2ecc71;
+            --dark: #1a252f;
+            --light: #f4f6f9;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: var(--light); color: #333; line-height: 1.6; }
+        
+        /* नवीन हिरो सेक्शन - फोटो आणि ओळखीसाठी */
+        .hero-section { background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%); color: white; padding: 60px 20px; text-align: center; }
+        .hero-container { max-width: 900px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px; }
+        
+        /* प्रोफाइल फोटोचे डिझाईन */
+        .profile-img { width: 160px; height: 160px; border-radius: 50%; border: 4px solid var(--secondary); object-fit: cover; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
+        
+        .hero-text h1 { margin: 0; font-size: 2.8em; letter-spacing: 1px; }
+        .hero-text p { font-size: 1.2em; color: #bdc3c7; margin-top: 5px; font-weight: 300; }
+        
+        .container { max-width: 900px; margin: 30px auto; padding: 30px; background: white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-radius: 12px; }
+        h2 { color: var(--primary); border-bottom: 3px solid var(--secondary); padding-bottom: 8px; margin-top: 0; font-size: 1.6em; }
+        
+        .skills-container { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px; }
+        .skill-box { background: #f8f9fa; padding: 15px; border-radius: 8px; border-left: 4px solid var(--secondary); }
+        .skill-name { font-weight: bold; color: var(--primary); margin-bottom: 5px; }
+        
+        .project-card { background: #fff; border: 1px solid #e1e8ed; border-radius: 8px; padding: 20px; margin-top: 15px; border-top: 4px solid var(--success); }
+        .project-title { font-weight: bold; font-size: 1.3em; color: var(--primary); margin-bottom: 10px; }
+        .project-tags { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+        .tag { background: #e8f4fd; color: var(--secondary); padding: 4px 10px; border-radius: 4px; font-size: 0.85em; font-weight: 600; }
+        
+        .btn { display: inline-block; padding: 10px 25px; border-radius: 25px; font-weight: bold; text-decoration: none; transition: all 0.3s ease; margin: 5px; cursor: pointer; }
+        .btn-primary { background-color: var(--secondary); color: white; }
+        .btn-success { background-color: var(--success); color: white; }
+        .btn-dark { background-color: #0077b5; color: white; }
+        .btn:hover { transform: scale(1.05); }
+        
+        .footer { text-align: center; padding: 25px; background: var(--dark); color: #fff; margin-top: 50px; font-size: 0.9em; }
+        
+        @media(min-width: 600px) {
+            .hero-container { flex-direction: row; text-align: left; gap: 40px; }
+        }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Vaishnavi Bhongale</h1>
-    <div class="subtitle">Computer Engineering Graduate | Aspiring Data Analyst</div>
-</header>
+<section class="hero-section">
+    <div class="hero-container">
+        <!-- 📸 इथे तुझ्या फोटोचे नाव लिहा. जर फोटोचे नाव 'vaishnavi.jpg' असेल तर खाली तसेच ठेवा -->
+        <img src="vaishnavi.jpg" alt="Vaishnavi Bhongale" class="profile-img">
+        <div class="hero-text">
+            <h1>Vaishnavi Bhongale</h1>
+            <p>BE Computer Engineering Graduate | Aspiring Data Analyst</p>
+            <div style="margin-top: 15px;">
+                <a href="#" class="btn btn-success" target="_blank">📄 Download Resume</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 <div class="container">
     <h2>About Me</h2>
-    <p>Computer Engineering graduate passionate about turning raw data into actionable insights. Skilled in Python, SQL, and Power BI. Eager to solve analytical problems and deliver business value as a Fresher Data Analyst.</p>
+    <p>I am a fresh Computer Engineering graduate with a strong analytical mindset and a passion for data-driven problem solving. I specialize in identifying patterns and transforming complex, raw data into clear, actionable business strategies. With a strong engineering base, I adapt quickly to new technologies and excel at building structural solutions.</p>
 </div>
 
 <div class="container">
     <h2>Technical Skills</h2>
-    <ul class="skills-list">
-        <li>SQL</li>
-        <li>Advanced Excel</li>
-        <li>Power BI</li>
-        <li>Python</li>
-        <li>Data Analysis</li>
-    </ul>
+    <div class="skills-container">
+        <div class="skill-box"><div class="skill-name">SQL (Databases)</div>Structured Queries, Joins, Aggregations</div>
+        <div class="skill-box"><div class="skill-name">Python Programming</div>Pandas, NumPy, Data Cleaning</div>
+        <div class="skill-box"><div class="skill-name">Data Visualization</div>Power BI, Interactive Dashboards</div>
+        <div class="skill-box"><div class="skill-name">Advanced Excel</div>Pivot Tables, VLOOKUP, Data Modeling</div>
+    </div>
 </div>
 
 <div class="container">
     <h2>Projects</h2>
     <div class="project-card">
-        <div class="project-title">Project 1: Retail Data Analysis using Python & SQL</div>
-        <p>Cleaned and analyzed a large dataset of transactions using Python (Pandas) and structured queries in SQL to find core purchasing patterns.</p>
+        <div class="project-title">📊 Retail Sales Performance Analysis</div>
+        <p>Processed and evaluated over 50,000 transaction records using Python to uncover seasonal buying trends. Developed optimized SQL queries to filter database entries, improving data retrieval efficiency.</p>
+        <div class="project-tags"><span class="tag">Python</span><span class="tag">SQL</span><span class="tag">Pandas</span></div>
     </div>
     <div class="project-card">
-        <div class="project-title">Project 2: Interactive Sales Dashboard</div>
-        <p>Built a dynamic Power BI dashboard that visualizes business growth metrics and user retention trends.</p>
+        <div class="project-title">📈 Dynamic Business Growth Dashboard</div>
+        <p>Designed a comprehensive Power BI dashboard tracking revenue changes and customer churn metrics. Extracted and structured clean data from messy Excel sheets to enable seamless C-suite level reporting.</p>
+        <div class="project-tags"><span class="tag">Power BI</span><span class="tag">Advanced Excel</span></div>
     </div>
 </div>
 
-<div class="container">
-    <h2>Contact Me</h2>
-    <p>If you are looking for a dedicated Data Analyst fresher to join your team, feel free to reach out to me!</p>
-    <div class="contact-links">
-        <a href="mailto:bhongalevaishnavi873@gmail.com" style="background: #e74c3c; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 10px;">📧 Email Me</a>
-        <a href="https://linkedin.com" target="_blank" style="background: #0077b5; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; display: inline-block; margin-top: 10px; margin-left: 10px;">💼 LinkedIn Profile</a>
+<div class="container" style="text-align: center;">
+    <h2>Get In Touch</h2>
+    <p>I am actively looking for full-time Data Analyst opportunities in Pune / Hinjewadi region. Let's connect!</p>
+    <div style="margin-top: 15px;">
+        <a href="mailto:bhongalevaishnavi873@gmail.com" class="btn btn-primary">📧 Email Me</a>
+        <a href="https://linkedin.com" target="_blank" class="btn btn-dark">💼 LinkedIn Profile</a>
     </div>
 </div>
-
 
 <div class="footer">
-    © 2026 Vaishnavi Bhongale | Built with Passion
+    © 2026 Vaishnavi Bhongale | Built as a Computer Engineer
 </div>
 
 </body>
